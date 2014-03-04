@@ -38,3 +38,25 @@ chart["Ice"] = Type(["Fight", "Rock", "Steel", "Fire"],["Ice"],[])
 chart["Dragon"] = Type(["Ice", "Dragon", "Fairy"],["Fire", "Water", "Grass", "Electr"],[])
 chart["Dark"] = Type(["Fight", "Bug", "Fairy"],["Ghost", "Dark"],["Psychc"])
 chart["Fairy"] = Type(["Poison", "Steel"],["Fight", "Bug", "Dark"],["Dragon"])
+
+def weaknesses(primary, secondary = None):
+	p = chart[primary]
+	if secondary == None:
+		return [k for (k,v) in p.items() if v > 1]
+	s = chart[secondary]
+	weak = []
+	for t in types:
+		if p.hitBy(t) * s.hitBy(t) > 1:
+			weak.append(t)
+	return weak
+	
+def resistances(primary, secondary = None):
+	p = chart[primary]
+	if secondary == None:
+		return [k for (k,v) in p.items() if v < 1]
+	s = chart[secondary]
+	weak = []
+	for t in types:
+		if p.hitBy(t) * s.hitBy(t) < 1:
+			weak.append(t)
+	return weak
