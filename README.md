@@ -1,0 +1,5 @@
+# PokemonTypes
+
+Hi! I started this little project over the weekend to play with the new Pokemon type chart in Generation 6. All analytics in this project are **up to date** according to Generation 6 and no other previous generation. Part of the motivation for this was to update some of the well-known information from Generation 5 that was no longer true (such as Ferrothorn/Jellicent, in which Ferrothorn is now neutral to Ghost and Dark attacks where it previously had resistances).
+
+A gigantic huge thank you and shout-out to /u/theSprt of Pokeffectiveness.com who provided me with his SQL database of Pokemon typings. If he hadn't shared the database file with me, it would have taken me a lot of time to create it myself, and it was very well-structured. I have not communicated with him recently, but I have decided to not release his database file for the time being, if anyone decides to fork this project on GitHub. They will either have to build their own database or use the code for a different purpose, unless I get permission to release the database file.
