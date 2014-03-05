@@ -35,7 +35,12 @@ for [typing1, typing2] in stallmates:
 	except:
 		p2_t2 = None
 	
-	if pokemonDB.both(p1_t1, p1_t2, p2_t1, p2_t2):
+	def verify(p1t1, p1t2, p2t1, p2t2):
+		first = [t in Type.resistances(p2t1, p2t2) for t in Type.weaknesses(p1t1, p1t2)]
+		second = [t in Type.resistances(p1t1, p1t2) for t in Type.weaknesses(p2t1, p2t2)]
+		return all(first) and all(second)
+	
+	if pokemonDB.both(p1_t1, p1_t2, p2_t1, p2_t2) and verify(p1_t1, p1_t2, p2_t1, p2_t2):
 		print p1_t1 + "/" + str(p1_t2), "and", p2_t1 + "/" + str(p2_t2)
 		print pokemonDB.reverseLookup(p1_t1, p1_t2)
 		print "+", pokemonDB.reverseLookup(p2_t1, p2_t2)

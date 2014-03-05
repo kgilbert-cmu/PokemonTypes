@@ -6,10 +6,6 @@ Steel/Dragon and Water/Flying
 [u'Dialga']
 + [u'Swanna', u'Ducklett', u'Wingull', u'Mantyke', u'Gyarados', u'Mantine', u'Pelipper']
 --------------------
-Flying/Dragon and Water/None # this one is erroneous
-[u'Noivern', u'Noibat']
-+ [u'Frogadier', u'Basculin', u'Huntail', u'Squirtle', u'Remoraid', u'Totodile', u'Seel', u'Goldeen', u'Alomomola', u'Floatzel', u'Clamperl', u'Octillery', u'Manaphy', u'Staryu', u'Tympole', u'Mudkip', u'Psyduck', u'Blastoise', u'Piplup', u'Wartortle', u'Magikarp', u'Luvdisc', u'Lumineon', u'Finneon', u'Seaking', u'Clawitzer', u'Prinplup', u'Gorebyss', u'Poliwhirl', u'Milotic', u'Shellder', u'Shellos', u'Corphish', u'Clauncher', u'Politoed', u'Golduck', u'Feraligatr', u'Panpour', u'Vaporeon', u'Samurott', u'Horsea', u'Kyogre', u'Wailmer', u'Dewott', u'Feebas', u'Buizel', u'Phione', u'Oshawott', u'Croconaw', u'Poliwag', u'Wailord', u'Kingler', u'Krabby', u'Suicune', u'Seadra', u'Froakie', u'Simipour']
---------------------
 Water/Ground and Steel/Flying
 [u'Seismitoad', u'Wooper', u'Barboach', u'Marshtomp', u'Quagsire', u'Whiscash', u'Palpitoad', u'Swampert', u'Gastrodon']
 + [u'Skarmory']
