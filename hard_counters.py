@@ -1,18 +1,36 @@
 import Type
+from optparse import OptionParser
 
 hardCounters = []
-for t1 in Type.types: 
-	for t2 in Type.types:
-		if Type.chart[t2].hitBy(t1) > 1 and Type.chart[t1].hitBy(t2) < 1:
-			# print t1, "\thard counters", t2
-			hardCounters.append((t1,t2))
-	if Type.chart[t1].hitBy(t1) == 0.5:
-		# print t1, "resists itself"
-		pass
-	if Type.chart[t1].hitBy(t1) == 2:
-		# print t1, "kills itself"
-		pass
-		
+
+def main():
+	usage = "usage: %prog [options] arg"
+	parser = OptionParser()
+	parser.add_option("-w", action="store_true", dest="weak",
+					help="strong or weak hard counters?")
+
+	(options, args) = parser.parse_args() # user input is stored in "options"
+	
+	global hardCounters
+	
+	for t1 in Type.types: 
+		for t2 in Type.types:
+			if options.weak and Type.chart[t2].hitBy(t1):
+				# print t1, "\tkills", t2
+				hardCounters.append((t1,t2))
+			elif Type.chart[t2].hitBy(t1) > 1 and Type.chart[t1].hitBy(t2) < 1:
+				# print t1, "\thard counters", t2
+				hardCounters.append((t1,t2))
+		if Type.chart[t1].hitBy(t1) == 0.5:
+			# print t1, "resists itself"
+			pass
+		if Type.chart[t1].hitBy(t1) == 2:
+			# print t1, "kills itself"
+			pass
+
+if __name__ == "__main__":
+    main()
+			
 HC = {}
 for (t1,t2) in hardCounters:
 	if t1 not in HC.keys():
