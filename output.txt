@@ -11,14 +11,14 @@ Water/Ground and Steel/Flying
 + [u'Skarmory']
 --------------------
 Steel/Rock and Flying/Dragon
-[u'Aggron', u'Aron', u'Lairon']
-+ [u'Noivern', u'Noibat']
+[u'Aggron', u'Aron', u'Lairon', u'Bastiodon', u'Probopass', u'Shieldon']
++ [u'Noivern', u'Noibat', u'Altaria', u'Dragonite', u'Rayquaza', u'Salamence']
 --------------------
 Steel/Ground and Water/Flying
-[u'Steelix']
+[u'Steelix', u'Excadrill']
 + [u'Swanna', u'Ducklett', u'Wingull', u'Mantyke', u'Gyarados', u'Mantine', u'Pelipper']
 --------------------
 Flying/Dragon and Steel/Fairy
-[u'Noivern', u'Noibat']
+[u'Noivern', u'Noibat', u'Altaria', u'Dragonite', u'Rayquaza', u'Salamence']
 + [u'Mawile', u'Klefki']
 --------------------

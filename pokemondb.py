@@ -29,7 +29,13 @@ for (name,types_list) in pokes.items():
 		typings[types].append(name)
 
 def reverseLookup(primary, secondary = None):
-	return typings[(primary, secondary)]
+	initial_results = typings[(primary, secondary)]
+	if secondary == None:
+		return initial_results
+	elif (secondary, primary) in typings.keys():
+		return initial_results + typings[(secondary, primary)]
+	else:
+		return initial_results
 
 def both(p1_t1, p1_t2, p2_t1, p2_t2):
 	if (p1_t1, p1_t2) in typings.keys() and (p2_t1, p2_t2) in typings.keys():
